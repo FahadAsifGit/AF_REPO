@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dags_artifact
-          path: /Dags/
+          path: Dags/*
 
 
   deploy-Dags:
