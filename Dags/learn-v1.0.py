@@ -7,7 +7,7 @@ import requests
 
 
 def print_welcome():
-    print('Welcome to Airflow! 1')
+    print('Welcome to Airflow! 2')
 
 def print_date():
     print('Today is {}'.format(datetime.today().date()))
