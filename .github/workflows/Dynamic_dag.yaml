@@ -36,7 +36,11 @@ jobs:
       - name: Check versions
         run: |
           python --version
-          airflow --version
+          airflow version
+
+      - name: create dags
+        run: |
+          python ./Dynamic_dags/dag_generator.py
 
     #   - name: Archive code coverage results
     #     uses: actions/upload-artifact@v3
