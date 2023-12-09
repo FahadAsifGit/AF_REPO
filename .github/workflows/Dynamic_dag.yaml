@@ -21,10 +21,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
     
-      - name: list folders
-        run: ls -al
       - name: get folder path
         run: |
+          ls -al
           echo "Script executed from: ${PWD}"
           BASEDIR=$(dirname $0)
           echo "Script location: ${BASEDIR}"
@@ -46,6 +45,12 @@ jobs:
       - name: create dags
         run: |
           python ./Dynamic_dags/dag_generator.py
+
+      - name: list folders
+        run: |
+          ls -al
+          cd ./Dynamic_dags/
+          ls -al
 
     #   - name: Archive code coverage results
     #     uses: actions/upload-artifact@v3
