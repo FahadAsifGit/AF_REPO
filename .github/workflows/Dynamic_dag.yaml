@@ -23,6 +23,11 @@ jobs:
     
       - name: list folders
         run: ls -al
+      - name: get folder path
+        run: |
+          echo "Script executed from: ${PWD}"
+          BASEDIR=$(dirname $0)
+          echo "Script location: ${BASEDIR}"
 
       - uses: actions/setup-python@v4
         with:
